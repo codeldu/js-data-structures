@@ -18,6 +18,7 @@ const restoran = {
             close : '23:00'
         }
     },
+    guests : "",
     order : function(starterInd, mainIndex){
         return [ this.starterMenu[starterInd], this. mainMenu[mainIndex] ]
     },
@@ -26,15 +27,117 @@ const restoran = {
     },
     cook : function(mehsul1, mehsul2, mehsul3){
         console.log(`Menim pizzam ${mehsul1}, ${mehsul2} ve ${mehsul3} terkiblidir`);
+    },
+    myFunction: function(mainIngredient, ...others){
+        console.log(mainIngredient);
+        console.log(others);
     }
 }
 
+const person1 = {
+    firstName : "Huseynagha",
+    dersler : 5,
+   
+}
+
+const person2 = {
+    firstName : "Mirtalib",
+    dersler : 6,
+    muellim : "Natiq"
+}
 
 
-let mehsullar = ['Pendir', 'Pomidor','Sosis'];
+// person1.muellim = person1.muellim && "<ANONIM>"
+// person1.muellim &&= "ANONIM"
+// person2.muellim = person2.muellim && "<ANONIM>"
 
 
-restoran.cook(...mehsullar);
+console.log(person1);
+console.log(person2);
+
+
+// person1.dersler ??= 30;
+
+// console.log(person1);
+
+// if (restoran.order){
+//     let sifarish = restoran.order(2, 3)
+//     console.log(sifarish);
+// }
+
+// restoran.order && console.log(restoran.order(1,2))
+
+
+
+// let guestOld ;
+
+// if (restoran.guests) {
+//     guestOld = restoran.guests
+// }else{
+//     guestOld = 10
+// }
+
+
+// let guests = restoran.guests ? restoran.guests : 10;
+
+// let guests2 = restoran.guests ?? 10;
+
+// console.log(guests);
+// console.log(guests2);
+
+
+
+
+
+//Rest pattern ve ya rest operator (...)
+//         rest             spread            spread
+// let [...others] = [...restoran.starterMenu, ...restoran.mainMenu];
+
+// console.log(main);
+// console.log(second);
+// console.log(others);
+
+// let {mon, ...otherDays} = restoran.openHours;
+
+// console.log( mon);
+// console.log(otherDays);
+
+// function sum(...numbers){
+//     let sum = 0;
+//     numbers.forEach(item=> sum += item)
+//     console.log(sum);
+// }
+
+// sum(1,2,5,6);
+
+// restoran.myFunction("toyuq","pendir","tomat", "barbeku sousu", "zeytun");
+
+// const arr = [1,3,5];
+
+// function sum(...numbers){
+
+//     console.log(numbers);
+//     let sum = 0;
+//     numbers.forEach(item=> sum += item)
+//     console.log(sum);
+// }
+
+// sum(arr);
+
+
+
+
+// let [first, ...others] = [2, 5, 9, 25, 66];
+
+// console.log(first);
+// console.log(others);
+
+
+
+// let mehsullar = ['Pendir', 'Pomidor','Sosis'];
+
+
+// restoran.cook(...mehsullar);
 
 // console.log(mehsullar);
 
@@ -171,4 +274,18 @@ restoran.cook(...mehsullar);
 // console.log(sum);
 
 
-console.log(sum(1,2));
+// console.log(sum(1,2));
+
+
+
+
+
+
+
+
+// Short circuit (&& and ||)
+
+// console.log( null || 6 || 0 );
+
+
+
